@@ -1,7 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Poppins:wght@400;500&display=swap");
 :root {
     --dark-bg-color: #100e1d;
     --primary-color: #2d9cdb;
+    --grey-bg-color: #f2f2f2;
+    --grey-text-color: #bdbdbd;
 }
 
 *,
@@ -31,12 +33,36 @@ body {
 }
 
 .rounded-img {
-    border: 18px;
+    border-radius: 18px;
     object-fit: cover;
 }
 
 .color-primary {
     color: var(--primary-color);
+}
+
+.input-container {
+    display: flex;
+    background-color: var(--grey-bg-color);
+    border-radius: 12px;
+    padding: 4px;
+}
+
+.input-container input {
+    font-size: 0.875em;
+    flex: 1;
+    border: none;
+    background: none;
+    margin-inline: 1.2em;
+}
+
+.input-container input::placeholder {
+    color: var(--grey-text-color);
+}
+
+.input-container input:focus {
+    border: none;
+    outline: none;
 }
 
 header {
@@ -107,7 +133,126 @@ section {
     width: 100%;
 }
 
+.section__title {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
 .hero-container {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+}
+
+.hero__title-container {
+    margin-top: 2em;
+    margin-inline: 3em;
+}
+
+.hero__title__unhappy-text {
+    font-size: 0.9em;
+}
+
+.hero__title__create-beautiful-websites-text {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.hero__image {
+    object-fit: cover;
+    margin-inline: 0.7rem;
+    height: 160px;
+}
+
+.hero__contact-us-container {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 3rem;
+    gap: 1.5em;
+}
+
+.hero__contact-us__description {
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+.hero__contact__question {
+    color: #828282;
+    font-size: 0.7em;
+}
+
+.hero__contact-input-container .input-container {
+    margin-top: 5px;
+}
+
+.services-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.services__title {
+    margin-inline: 3rem;
+}
+
+.service-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: flex-start;
+    margin-inline: 1rem;
+    padding: 2rem;
+    border-radius: 24px;
+    transition: all 0.25s ease;
+}
+
+.service-container:hover {
+    box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+}
+
+.service__logo-container {
+    height: 67px;
+    aspect-ratio: 1/1;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.service__logo-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.service__ui-logo-container {
+    background-color: #2d9cdb;
+}
+
+.service__front-end-logo-container {
+    background-color: #27ae60;
+}
+
+.service__back-end-logo-container {
+    background-color: #eb5757;
+}
+
+.service__title {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.service__description {
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.works-container {
+    margin-top: 100px;
+}
+
+.works__title {
+    margin-inline: 3rem;
 }
