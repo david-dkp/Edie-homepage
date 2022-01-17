@@ -1,8 +1,113 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Poppins:wght@500&display=swap");
+:root {
+    --dark-bg-color: #100e1d;
+    --primary-color: #2d9cdb;
+}
 
-* {
+*,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.button--primary {
+    background-color: var(--primary-color);
+    font-size: 1em;
+    padding: 1.5em 1.3em;
+    line-height: 0;
+    border: none;
+    border-radius: 12px;
+    font-weight: 500;
+    color: white;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.rounded-img {
+    border: 18px;
+    object-fit: cover;
+}
+
+.color-primary {
+    color: var(--primary-color);
+}
+
+header {
+    background: white;
+    top: 0;
+    position: sticky;
+    padding: 1em 0.7em;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.navigation__brand-name {
+    font-family: "Heebo", sans-serif;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.navigation__list {
+    right: 0;
+    top: 0;
+    position: fixed;
+    background-color: var(--dark-bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    transition: all 0.5s ease;
+    justify-content: start;
+    align-items: center;
+    padding: 2em;
+    list-style: none;
+    right: -100%;
+}
+
+.navigation__mobile-menu-scrim {
+    display: none;
+    transition: all 0.5s ease;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.navigation__mobile-menu-scrim.visible {
+    display: block;
+}
+
+.navigation__list.opened {
+    right: 0;
+}
+
+.navigation__list a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+.navigation__hamburger-button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+section {
+    width: 100%;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
 }

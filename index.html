@@ -5,18 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
         <title>Edie | We create beautiful and fast web services</title>
+        <script src="index.js" async></script>
     </head>
     <body>
         <header>
-            <h1 class="brand-name">Edit</h1>
-            <div class="hamburger-button">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
+            <h1 class="navigation__brand-name">Edie</h1>
+            <div class="navigation__mobile-menu-scrim"></div>
+            <ul class="navigation__list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#works">Our Works</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="navigation__hamburger-button">
+                <img src="assets/icons/menu.svg" alt="Hamburger button" />
+            </button>
         </header>
         <main>
-            <section class="hero-container">
+            <section id="home" class="hero-container">
                 <div class="hero-title-container">
                     <p class="unhappy-text color-primary">
                         Unhappy with your website?
@@ -51,7 +58,7 @@
                     </div>
                 </div>
             </section>
-            <section class="services-container">
+            <section id="services" class="services-container">
                 <h2 class="section__header-title">
                     We offer high demand services
                 </h2>
@@ -95,7 +102,7 @@
                     <button class="button--primary">Get started</button>
                 </div>
             </section>
-            <section class="works-container">
+            <section id="works" class="works-container">
                 <h2 class="section__header-title">
                     Good design means good business
                 </h2>
@@ -168,7 +175,7 @@
                     />
                 </div>
             </section>
-            <section class="clients-container">
+            <section id="clients" class="clients-container">
                 <p class="client__saying">
                     “Fast and outstanding resutls. Edie understands their
                     customer’s needs. They have a young and talented team.”
@@ -185,7 +192,7 @@
                     </div>
                 </div>
             </section>
-            <footer>
+            <footer id="contact">
                 <div class="footer__sub-container">
                     <ul class="footer__navigation">
                         <li class="footer__navigation__item">Home</li>
