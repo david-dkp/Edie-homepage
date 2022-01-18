@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Montserrat:wght@500&family=Poppins:wght@300;400;500&display=swap");
 :root {
     --dark-bg-color: #100e1d;
     --primary-color: #2d9cdb;
@@ -12,11 +12,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-}
-
-body {
-    overflow-x: hidden;
-    width: 100%;
 }
 
 .button--primary {
@@ -176,12 +171,12 @@ section {
     font-weight: 400;
 }
 
-.hero__contact__question {
+.contact__question {
     color: #828282;
     font-size: 0.7em;
 }
 
-.hero__contact-input-container .input-container {
+.contact-input-container .input-container {
     margin-top: 5px;
 }
 
@@ -251,8 +246,210 @@ section {
 
 .works-container {
     margin-top: 100px;
+    width: 100vw;
 }
 
 .works__title {
     margin-inline: 3rem;
+}
+
+.works-list-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.6rem;
+    margin-top: 3rem;
+    gap: 30px;
+}
+
+.work__image {
+    aspect-ratio: 1/1;
+    width: 100%;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.work__type-text {
+    margin-top: 10px;
+    color: #828282;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.work__app-name {
+    font-size: 1.125em;
+    font-weight: 500;
+}
+
+.team-container {
+    margin-top: 125px;
+    padding-inline: 0.6rem;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.team-presentation__meet-team-text {
+    color: #eb5757;
+    font-size: 1.125em;
+    font-weight: 500;
+}
+
+.team-presentation__title {
+    font-size: 2.25em;
+    font-weight: 500;
+    margin-top: 0.2em;
+}
+
+.team-presentation__description {
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.team-photos-container {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    gap: 12px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.team-photos-container img:first-child {
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    width: 100%;
+}
+
+.team-photos-container img:nth-child(2) {
+    align-self: end;
+    width: 87%;
+}
+
+.team-photos-container img:nth-child(3) {
+    margin-right: 10px;
+    width: 95%;
+    align-self: flex-start;
+}
+
+.team-photos-container img {
+    border-radius: 24px;
+}
+
+.clients-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 125px;
+    padding-inline: 10px;
+    margin-bottom: 100px;
+}
+
+.client__saying {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.client__profile {
+    width: 100%;
+    display: flex;
+    gap: 2em;
+}
+
+.client__profile-image {
+    height: 90px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.client__profile__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.client__profile__info__name {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.client__profile__info__job {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.125em;
+    font-weight: 500;
+    color: #828282;
+}
+
+footer {
+    background-color: var(--dark-bg-color);
+    padding: 1.5em 2.5em;
+    padding-top: 2.5em;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.footer__sub-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.footer__navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    font-size: 1.125em;
+}
+
+.footer__navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer__created-by {
+    width: 100%;
+    text-align: center;
+    font-size: 0.875em;
+    font-weight: 500;
+    margin-top: 150px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.footer__created-by__name {
+    font-weight: bold;
+}
+
+.footer__social-medias {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__social-medias__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 1.7em;
+}
+
+.footer__social-medias__list a {
+    height: 100%;
+}
+
+.footer__social-medias__list img {
+    height: 100%;
+    width: 100%;
+}
+
+.footer__social-medias__title {
+    font-family: "Heebo", sans-serif;
+    font-size: 2.25em;
+    font-weight: 800;
 }
