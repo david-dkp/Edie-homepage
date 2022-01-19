@@ -129,10 +129,6 @@ header {
     background: none;
 }
 
-section {
-    width: 100%;
-}
-
 .section__title {
     font-size: 1.5em;
     font-weight: 500;
@@ -169,6 +165,10 @@ section {
     gap: 1.5em;
 }
 
+.hero__contact-us__title {
+    font-weight: 500;
+}
+
 .hero__contact-us__description {
     font-size: 0.75em;
     font-weight: 400;
@@ -187,7 +187,7 @@ section {
 .hero__title-container,
 .hero__contact-us-container {
     margin-right: 3rem;
-    margin-left: max(3rem, 20%);
+    margin-left: max(3rem, 15%);
 }
 
 .contact__question {
@@ -202,12 +202,24 @@ section {
 .services-container {
     margin-top: 100px;
     display: flex;
-    flex-direction: column;
-    gap: 3em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
-.services__title {
+.services-sub-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
     margin-inline: 3rem;
+    max-width: 1200px;
+}
+
+.services__list {
+    display: flex;
+    gap: 3em;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .service-container {
@@ -215,7 +227,6 @@ section {
     flex-direction: column;
     gap: 2em;
     align-items: flex-start;
-    margin-inline: 1rem;
     padding: 2rem;
     border-radius: 24px;
     transition: all 0.25s ease;
@@ -499,11 +510,11 @@ footer {
     }
 
     .hero__title-container {
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
 
-    .hero__contact-us-container .section__title {
-        font-size: 2em;
+    .hero__contact-us__title {
+        font-size: 2.2em;
     }
 
     .hero__contact-us__description {
@@ -512,5 +523,15 @@ footer {
 
     .hero__contact-us__input {
         font-size: 1.1em;
+    }
+}
+
+@media (min-width: 900px) {
+    .service-container {
+        flex: 1;
+    }
+
+    .services__list {
+        flex-direction: row;
     }
 }
