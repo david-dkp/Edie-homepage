@@ -14,6 +14,10 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .button--primary {
     background-color: var(--primary-color);
     font-size: 1em;
@@ -64,10 +68,11 @@ header {
     background: white;
     top: 0;
     position: sticky;
-    padding: 1em 0.7em;
+    padding: clamp(1em, 3vw, 2em) clamp(0.7em, 3vw, 2em);
     display: flex;
     justify-content: space-between;
     width: 100vw;
+    align-items: center;
 }
 
 .navigation__brand-name {
@@ -91,6 +96,7 @@ header {
     padding: 2em;
     list-style: none;
     right: -100%;
+    font-size: 1.5em;
 }
 
 .navigation__mobile-menu-scrim {
@@ -115,7 +121,6 @@ header {
 .navigation__list a {
     text-decoration: none;
     color: white;
-    font-size: 1.5em;
 }
 
 .navigation__hamburger-button {
@@ -136,12 +141,11 @@ section {
 .hero-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .hero__title-container {
     margin-top: 2em;
-    margin-inline: 3em;
 }
 
 .hero__title__unhappy-text {
@@ -155,20 +159,35 @@ section {
 
 .hero__image {
     object-fit: cover;
-    margin-inline: 0.7rem;
-    height: 160px;
+    margin-inline: clamp(0.7rem, 2vw, 2.5rem);
+    height: clamp(160px, 18vw, 354px);
 }
 
 .hero__contact-us-container {
     display: flex;
     flex-direction: column;
-    margin-inline: 3rem;
     gap: 1.5em;
 }
 
 .hero__contact-us__description {
-    font-size: 0.8em;
+    font-size: 0.75em;
     font-weight: 400;
+    max-width: 275px;
+    color: #4f4f4f;
+}
+
+.hero__contact-us__input {
+    max-width: 291px;
+}
+
+.hero__contact-us__input .input-container {
+    font-size: 0.875em;
+}
+
+.hero__title-container,
+.hero__contact-us-container {
+    margin-right: 3rem;
+    margin-left: max(3rem, 20%);
 }
 
 .contact__question {
@@ -452,4 +471,46 @@ footer {
     font-family: "Heebo", sans-serif;
     font-size: 2.25em;
     font-weight: 800;
+}
+
+@media (min-width: 768px) {
+    .navigation__hamburger-button {
+        display: none;
+    }
+
+    .navigation__mobile-menu-scrim.visible {
+        display: none;
+    }
+
+    .navigation__list {
+        position: relative;
+        min-height: 0;
+        right: 0;
+        background: none;
+        flex-direction: row;
+        padding: 0;
+        font-size: 1.5em;
+    }
+
+    .navigation__list a {
+        font-size: 0.8em;
+        color: black;
+        font-weight: 500;
+    }
+
+    .hero__title-container {
+        font-size: 1.3em;
+    }
+
+    .hero__contact-us-container .section__title {
+        font-size: 2em;
+    }
+
+    .hero__contact-us__description {
+        font-size: 0.8em;
+    }
+
+    .hero__contact-us__input {
+        font-size: 1.1em;
+    }
 }

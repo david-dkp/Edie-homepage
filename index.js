@@ -17,3 +17,14 @@ for (link of navigationLinks) {
 }
 
 navigationMobileScrim.onclick = toggleMenu
+
+//Setup smooth scrolling to anchor
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault()
+
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+        })
+    })
+})
