@@ -18,6 +18,13 @@ body {
     overflow-x: hidden;
 }
 
+.fluid-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 .button--primary {
     background-color: var(--primary-color);
     font-size: 1em;
@@ -201,18 +208,19 @@ header {
 
 .services-container {
     margin-top: 100px;
+}
+
+.services-sub-container,
+.works-sub-container {
     display: flex;
+    flex-direction: column;
+    margin-inline: 3rem;
+    max-width: 1200px;
     width: 100%;
-    justify-content: center;
-    align-items: center;
 }
 
 .services-sub-container {
-    display: flex;
-    flex-direction: column;
     gap: 3em;
-    margin-inline: 3rem;
-    max-width: 1200px;
 }
 
 .services__list {
@@ -276,14 +284,13 @@ header {
 
 .works-container {
     margin-top: 100px;
-    width: 100vw;
 }
 
 .works__title {
     margin-inline: 3rem;
 }
 
-.works-list-container {
+.works__list-container {
     display: flex;
     flex-direction: column;
     margin: 0.6rem;
@@ -485,6 +492,10 @@ footer {
 }
 
 @media (min-width: 768px) {
+    .section__title {
+        font-size: 2.25em;
+    }
+
     .navigation__hamburger-button {
         display: none;
     }
@@ -510,11 +521,11 @@ footer {
     }
 
     .hero__title-container {
-        font-size: 1.5em;
+        font-size: 1.7em;
     }
 
     .hero__contact-us__title {
-        font-size: 2.2em;
+        font-size: 2.4em;
     }
 
     .hero__contact-us__description {
@@ -523,6 +534,21 @@ footer {
 
     .hero__contact-us__input {
         font-size: 1.1em;
+    }
+
+    .works__list-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
+
+    .work__app-name {
+        font-size: 1.5em;
+    }
+
+    .work-container:nth-child(2n-1) {
+        margin-top: clamp(60px, 8vw, 110px);
+        transform: translateY(10%);
     }
 }
 
