@@ -18,6 +18,10 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    overflow-x: hidden;
+}
+
 .fluid-container {
     display: flex;
     width: 100%;
@@ -60,6 +64,7 @@ body {
     border: none;
     background: none;
     margin-inline: 1.2em;
+    min-width: 0px;
 }
 
 .input-container input::placeholder {
@@ -131,9 +136,52 @@ header {
     right: 0;
 }
 
+.navigation__list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .navigation__list a {
+    position: relative;
     text-decoration: none;
     color: white;
+    transition: transform 0.5s ease;
+}
+
+.navigation__list a::before {
+    position: absolute;
+    content: "";
+    width: 1;
+    border-radius: 999px;
+    z-index: -1;
+    height: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -10px;
+    transition: height 0.5s ease;
+    background-color: gray;
+}
+
+.navigation__list a::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 20px);
+    z-index: -1;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -10px;
+    transition: width 0.05s ease;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.navigation__list a:hover::before {
+    height: 100%;
+}
+
+.navigation__list a:active::after {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .navigation__hamburger-button {
@@ -170,8 +218,8 @@ header {
 
 .hero__image {
     object-fit: cover;
-    height: clamp(160px, 18vw, 354px);
-    max-width: 1500px;
+    height: clamp(160px, 20vw, 354px);
+    max-width: 1400px;
     width: 100%;
     align-self: center;
 }
@@ -204,8 +252,11 @@ header {
 
 .hero__title-container,
 .hero__contact-us-container {
-    margin-right: 3rem;
-    margin-left: 25vw;
+    margin-inline: clamp(1.4rem, 2vw, 3rem);
+}
+
+.contact-input-container {
+    font-size: 1em;
 }
 
 .contact__question {
@@ -228,7 +279,7 @@ header {
 .footer__sub-container {
     display: flex;
     flex-direction: column;
-    margin-inline: 3rem;
+    margin-inline: clamp(1.4rem, 2vw, 3rem);
     max-width: 1200px;
     width: 100%;
 }
@@ -542,6 +593,11 @@ footer {
 
     .hero__contact-us__input {
         font-size: 1.1em;
+    }
+
+    .hero__title-container,
+    .hero__contact-us-container {
+        margin-left: calc(25vw);
     }
 
     .works__list-container {
