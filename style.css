@@ -527,6 +527,8 @@ footer {
 }
 
 .footer__created-by__name {
+    color: white;
+
     font-weight: bold;
 }
 
