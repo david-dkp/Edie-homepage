@@ -80,6 +80,7 @@ header {
     justify-content: space-between;
     width: 100vw;
     align-items: center;
+    z-index: 1;
 }
 
 .navigation__brand-name {
@@ -323,12 +324,12 @@ header {
 
 .team-container {
     margin-top: 125px;
-    padding-inline: 0.6rem;
-    width: 100vw;
     overflow: hidden;
+}
+
+.team-sub-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
 .team-presentation__meet-team-text {
@@ -555,8 +556,15 @@ footer {
         transform: translateY(10%);
     }
 
-    .team-container {
+    .team-sub-container {
         flex-direction: row;
+        align-items: center;
+        gap: 10vw;
+        justify-content: space-between;
+    }
+
+    .team-photos-container {
+        gap: 1rem;
     }
 
     .team-photos-container {
