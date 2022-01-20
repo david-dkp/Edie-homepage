@@ -5,6 +5,7 @@ const navigationMobileScrim = document.querySelector(
     ".navigation__mobile-menu-scrim"
 )
 const header = document.querySelector("header")
+const sayingElement = document.querySelector(".client__saying")
 
 const toggleMenu = () => {
     navigationList.classList.toggle("opened")
