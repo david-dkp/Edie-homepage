@@ -216,7 +216,8 @@ header {
 
 .services-sub-container,
 .works-sub-container,
-.team-sub-container {
+.team-sub-container,
+.clients-sub-container {
     display: flex;
     flex-direction: column;
     margin-inline: 3rem;
@@ -380,11 +381,13 @@ header {
 }
 
 .clients-container {
+    margin-top: 125px;
+}
+
+.clients-sub-container {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-top: 125px;
-    padding-inline: 10px;
     margin-bottom: 100px;
 }
 
@@ -570,6 +573,15 @@ footer {
     .team-photos-container {
         flex: 1;
         width: auto;
+    }
+
+    .client__saying {
+        font-size: 2.25em;
+    }
+
+    .clients-sub-container {
+        justify-self: start;
+        padding-right: max(250px, 10%);
     }
 }
 
