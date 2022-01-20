@@ -217,7 +217,8 @@ header {
 .services-sub-container,
 .works-sub-container,
 .team-sub-container,
-.clients-sub-container {
+.clients-sub-container,
+.footer__sub-container {
     display: flex;
     flex-direction: column;
     margin-inline: 3rem;
@@ -461,7 +462,7 @@ footer {
 .footer__created-by {
     width: 100%;
     text-align: center;
-    font-size: 0.875em;
+    font-size: 1em;
     font-weight: 500;
     margin-top: 150px;
     font-family: "Montserrat", sans-serif;
@@ -582,6 +583,11 @@ footer {
     .clients-sub-container {
         justify-self: start;
         padding-right: max(250px, 10%);
+    }
+
+    .footer__sub-container {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
