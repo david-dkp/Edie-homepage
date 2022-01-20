@@ -4,6 +4,7 @@ const navigationLinks = document.querySelectorAll(".navigation__list a")
 const navigationMobileScrim = document.querySelector(
     ".navigation__mobile-menu-scrim"
 )
+const header = document.querySelector("header")
 
 const toggleMenu = () => {
     navigationList.classList.toggle("opened")
@@ -28,3 +29,12 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         })
     })
 })
+
+//Setup nav bar
+window.onscroll = () => {
+    if (window.scrollY == 0) {
+        header.classList.remove("elevated")
+    } else {
+        header.classList.add("elevated")
+    }
+}
