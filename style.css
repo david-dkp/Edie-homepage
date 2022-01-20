@@ -145,6 +145,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    padding-inline: clamp(0.7rem, 2vw, 2.5rem);
 }
 
 .hero__title-container {
@@ -162,8 +163,10 @@ header {
 
 .hero__image {
     object-fit: cover;
-    margin-inline: clamp(0.7rem, 2vw, 2.5rem);
     height: clamp(160px, 18vw, 354px);
+    max-width: 1500px;
+    width: 100%;
+    align-self: center;
 }
 
 .hero__contact-us-container {
@@ -194,7 +197,7 @@ header {
 .hero__title-container,
 .hero__contact-us-container {
     margin-right: 3rem;
-    margin-left: max(3rem, 15%);
+    margin-left: max(3rem, 25%);
 }
 
 .contact__question {
@@ -211,7 +214,8 @@ header {
 }
 
 .services-sub-container,
-.works-sub-container {
+.works-sub-container,
+.team-sub-container {
     display: flex;
     flex-direction: column;
     margin-inline: 3rem;
@@ -549,6 +553,15 @@ footer {
     .work-container:nth-child(2n-1) {
         margin-top: clamp(60px, 8vw, 110px);
         transform: translateY(10%);
+    }
+
+    .team-container {
+        flex-direction: row;
+    }
+
+    .team-photos-container {
+        flex: 1;
+        width: auto;
     }
 }
 
